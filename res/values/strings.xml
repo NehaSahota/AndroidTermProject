@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">"sherlock "</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome">Welcome Detective</string>
+    <string name="add_mission">Add Mission</string>
+    <string name="misson_one">Mission One</string>
+    <string name="mission_two">Mission Two</string>
+    <string name="mission_three">Mission Three</string>
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="height">Height (in cms)</string>
+    <string name="hair">Hair Color</string>
+    <string name="notes">Notes</string>
+    <string name="heading">**Enter the Details **</string>
+    <string name="objective">Objectives</string>
+
+</resources>
