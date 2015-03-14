@@ -22,7 +22,6 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
                 setContentView(R.layout.add_mission);
             }
-
         });
         
         
