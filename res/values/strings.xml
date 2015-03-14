@@ -18,5 +18,8 @@
     <string name="notes">Notes</string>
     <string name="heading">**Enter the Details **</string>
     <string name="objective">Objectives</string>
+    <string name="client">Client</string>
+    <string name="suspect">Suspect</string>
+    <string name="enter_details">Enter</string>
 
 </resources>

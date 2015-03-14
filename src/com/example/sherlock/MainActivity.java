@@ -29,10 +29,11 @@ public class MainActivity extends Activity {
        /* Button addMisson = (Button) findViewById(R.id.addMissionButton);
         addMisson.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                setContentView(R.layout.add_mission);
+                setContentView(R.layout.objectives);
             }
 
         });*/
+    
     }
 
 
