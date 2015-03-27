@@ -70,7 +70,6 @@ public class AddEditDetailsFragment extends Fragment{
 	         inflater.inflate(R.layout.fragment_add_edit, container, false);
 	      nameEditText = (EditText) view.findViewById(R.id.nameEditText);
 	      heightEditText = (EditText) view.findViewById(R.id.heightEditText);
-	     
 	      genderEditText = (EditText) view.findViewById(R.id.genderEditText);
 	      haircolorEditText = (EditText) view.findViewById(R.id.haircolorEditText);
 	      ageEditText = (EditText) view.findViewById(R.id.ageEditText);
@@ -82,23 +81,22 @@ public class AddEditDetailsFragment extends Fragment{
 	      {
 	        /* rowID = suspectInfoBundle.getLong(MainActivity.ROW_ID);*/
 	         nameEditText.setText(suspectInfoBundle.getString("name"));  
-	         heightEditText.setText(suspectInfoBundle.getString("director"));  
-	         writerEditText.setText(suspectInfoBundle.getString("writer"));  
-	         genderEditText.setText(suspectInfoBundle.getString("actor"));  
-	         haircolorEditText.setText(suspectInfoBundle.getString("actress"));  
-	         ageEditText.setText(suspectInfoBundle.getString("genre"));  
-	         notesEditText.setText(suspectInfoBundle.getString("year"));  
+	         heightEditText.setText(suspectInfoBundle.getString("height"));  
+             genderEditText.setText(suspectInfoBundle.getString("gender"));  
+	         haircolorEditText.setText(suspectInfoBundle.getString("haircolor"));  
+	         ageEditText.setText(suspectInfoBundle.getString("age"));  
+	         notesEditText.setText(suspectInfoBundle.getString("notes"));  
 	      } 
 	      
 	
 	      Button saveMovieButton = 
 	         (Button) view.findViewById(R.id.saveSuspectButton);
-	      saveMovieButton.setOnClickListener(saveMovieButtonClicked);
+	      saveMovieButton.setOnClickListener(saveSuspectButtonClicked);
 	      return view;
 	   }
 
 	 
-	   OnClickListener saveMovieButtonClicked = new OnClickListener() 
+	   OnClickListener saveSuspectButtonClicked = new OnClickListener() 
 	   {
 	      @Override
 	      public void onClick(View v) 
@@ -106,13 +104,13 @@ public class AddEditDetailsFragment extends Fragment{
 	         if (nameEditText.getText().toString().trim().length() != 0)
 	         {
 	           
-	            AsyncTask<Object, Object, Object> saveContactTask = 
+	            AsyncTask<Object, Object, Object> saveSuspectTask = 
 	               new AsyncTask<Object, Object, Object>() 
 	               {
 	                  @Override
 	                  protected Object doInBackground(Object... params) 
 	                  {
-	                     saveContact(); 
+	                     saveSuspect(); 
 	                     return null;
 	                  } 
 	      
@@ -131,7 +129,7 @@ public class AddEditDetailsFragment extends Fragment{
 	               }; 
 	               
 	          
-	            saveContactTask.execute((Object[]) null); 
+	            saveSuspectTask.execute((Object[]) null); 
 	         } 
 	         else 
 	         {
@@ -149,13 +147,13 @@ public class AddEditDetailsFragment extends Fragment{
 	                  }               
 	               };
 	            
-	            errorSaving.show(getFragmentManager(), "error saving movie");
+	            errorSaving.show(getFragmentManager(), "error saving suspect");
 	         } 
 	      } 
 	   }; 
 
 	 
-	   private void saveContact() 
+	   private void saveSuspect() 
 	   {
 	     
 	      DBConnect DBConnect = 
@@ -175,7 +173,7 @@ public class AddEditDetailsFragment extends Fragment{
 	      } 
 	      else
 	      {
-	         DBConnect.updateMovie(rowID,
+	         DBConnect.updateSuspect(rowID,
 	            nameEditText.getText().toString(),
 	            heightEditText.getText().toString(), 
 	            writerEditText.getText().toString(), 

@@ -44,36 +44,36 @@ public class DBConnect {
 	   public long insertSuspect(String name, String height, String gender,  
 	      String haircolor, String age, String notes, String year) 
 	   {
-	      ContentValues newMovie = new ContentValues();
-	      newMovie.put("name", name);
-	      newMovie.put("height", height);
-	      newMovie.put("gender", gender);
-	      newMovie.put("haircolor", haircolor);
-	      newMovie.put("age", age);
-	      newMovie.put("notes", notes);
-	      newMovie.put("year", year);
+	      ContentValues newSuspect = new ContentValues();
+	      newSuspect.put("name", name);
+	      newSuspect.put("height", height);
+	      newSuspect.put("gender", gender);
+	      newSuspect.put("haircolor", haircolor);
+	      newSuspect.put("age", age);
+	      newSuspect.put("notes", notes);
+	      newSuspect.put("year", year);
 
 	      open(); // open the database
-	      long rowID = database.insert("movies", null, newMovie);
+	      long rowID = database.insert("movies", null, newSuspect);
 	      close(); // close the database
 	      return rowID;
 	   } 
 
-	   // updates an existing contact in the database
-	   public void updateMovie(long id, String name, String height, 
+	   // updates an existing suspect in the database
+	   public void updateSuspect(long id, String name, String height, 
 	      String gender, String haircolor, String age, String notes, String year) 
 	   {
-	      ContentValues editMovie = new ContentValues();
-	      editMovie.put("name", name);
-	      editMovie.put("height", height);
-	      editMovie.put("gender", gender);
-	      editMovie.put("haircolor", haircolor);
-	      editMovie.put("age", age);
-	      editMovie.put("notes", notes);
-	      editMovie.put("year", year);
+	      ContentValues editSuspect = new ContentValues();
+	      editSuspect.put("name", name);
+	      editSuspect.put("height", height);
+	      editSuspect.put("gender", gender);
+	      editSuspect.put("haircolor", haircolor);
+	      editSuspect.put("age", age);
+	      editSuspect.put("notes", notes);
+	      editSuspect.put("year", year);
 
 	      open(); 
-	      database.update("suspects", editMovie, "_id=" + id, null);
+	      database.update("suspects", editSuspect, "_id=" + id, null);
 	      close(); 
 	   } 
 
