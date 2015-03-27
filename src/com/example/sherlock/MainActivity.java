@@ -13,24 +13,11 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        
-        ImageView image = (ImageView) findViewById(R.id.welcomeImageView);
-        image.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                setContentView(R.layout.add_mission);
-            }
-        });
-        
-        
-       /* Button addMisson = (Button) findViewById(R.id.addMissionButton);
-        addMisson.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                setContentView(R.layout.add_mission);
-            }
-
-        });*/
+        setContentView(R.layout.activity_main); 
     }
+        
+    
+    
 
 
     @Override
