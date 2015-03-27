@@ -1,12 +1,10 @@
 package com.example.sherlock;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 
@@ -15,31 +13,9 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); 
+    }
         
-      /*  ImageView image = (ImageView) findViewById(R.id.welcomeImageView);
-        image.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                setContentView(R.layout.add_mission);*/
-            }
-
-    
-//        
-//        
-//       Button addMisson = (Button) findViewById(R.id.missionOneButton);
-//        addMisson.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View view) {
-//                setContentView(R.layout.objectives);
-//            }
-//
-//        });
-        
-        /*final Button addMisson = (Button) findViewById(R.id.missionOneButton);
-        addMisson.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-            	setContentView(R.layout.objectives);
-            }
-        });*/
     
     
 
