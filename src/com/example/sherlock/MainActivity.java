@@ -17,24 +17,31 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        ImageView image = (ImageView) findViewById(R.id.welcomeImageView);
+      /*  ImageView image = (ImageView) findViewById(R.id.welcomeImageView);
         image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                setContentView(R.layout.add_mission);
+                setContentView(R.layout.add_mission);*/
             }
 
-        });
+    
+//        
+//        
+//       Button addMisson = (Button) findViewById(R.id.missionOneButton);
+//        addMisson.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                setContentView(R.layout.objectives);
+//            }
+//
+//        });
         
-        
-       /* Button addMisson = (Button) findViewById(R.id.addMissionButton);
+        /*final Button addMisson = (Button) findViewById(R.id.missionOneButton);
         addMisson.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                setContentView(R.layout.objectives);
+            public void onClick(View v) {
+            	setContentView(R.layout.objectives);
             }
-
         });*/
     
-    }
+    
 
 
     @Override

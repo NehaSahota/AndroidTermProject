@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">"sherlock "</string>
+    <string name="app_name">"Sherlock "</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="welcome">Welcome Detective</string>
@@ -21,5 +21,34 @@
     <string name="client">Client</string>
     <string name="suspect">Suspect</string>
     <string name="enter_details">Enter</string>
+    
+    
+    
+    <string name="no_movies">No Movies</string>
+    <string name="menuitem_add">Add</string>
+    <string name="menuitem_edit">Edit</string>
+    <string name="menuitem_delete">Delete</string>
+    <string name="button_save_movie">Save Details </string>
+    <string name="hint_name">Name (Required)</string>
+    <string name="hint_director">Gender</string>
+    <string name="hint_writer">Height (in cms)</string>
+    <string name="hint_actor">Hair Color</string>
+    <string name="hint_actress">Age</string>
+    <string name="hint_genre">Notes</string>
+    <string name="hint_year">Year</string>
+    <string name="label_name">Name:</string>
+    <string name="label_director">Gender:</string>
+    <string name="label_writer">Height (in cms):</string>
+    <string name="label_actor">Hair Color:</string>
+    <string name="label_actress">Age:</string>
+    <string name="label_genre">Notes:</string>
+    <string name="label_year">Year:</string>
+    <string name="confirm_title">Are You Sure?</string>
+    <string name="confirm_message">This will permanently delete the suspect</string>
+    <string name="ok">OK</string>
+    <string name="error_message">You must enter a suspect name</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_delete">Delete</string>
+    
 
 </resources>
