@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_phone"
             android:imeOptions="actionNext"
-            android:inputType="number" >
+            android:inputType="number|phone" >
         </EditText>
 
         <EditText

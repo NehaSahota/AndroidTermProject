@@ -33,9 +33,9 @@ public class AddEditDetailsFragment extends Fragment
 	// EditTexts for mission information
 	private EditText nameEditText;
 	private EditText heightEditText;
-	private EditText phoneEditText;
 	private EditText genderEditText;
 	private EditText haircolorEditText;
+	private EditText phoneEditText;
 	private EditText ageEditText;
 	private EditText notesEditText;
 
@@ -67,10 +67,10 @@ public class AddEditDetailsFragment extends Fragment
 		View view = 
 		inflater.inflate(R.layout.fragment_add_edit, container, false);
 		nameEditText = (EditText) view.findViewById(R.id.nameEditText);
-		phoneEditText = (EditText) view.findViewById(R.id.phoneEditText);
 		heightEditText = (EditText) view.findViewById(R.id.heightEditText);
 		genderEditText = (EditText) view.findViewById(R.id.genderEditText);
 		haircolorEditText = (EditText) view.findViewById(R.id.haircolorEditText);
+		phoneEditText = (EditText) view.findViewById(R.id.phoneEditText);
 		ageEditText = (EditText) view.findViewById(R.id.ageEditText);
 		notesEditText = (EditText) view.findViewById(R.id.notesEditText);
 
@@ -80,10 +80,10 @@ public class AddEditDetailsFragment extends Fragment
 		{
 			rowID = missionInfoBundle.getLong(MainActivity.ROW_ID);
 			nameEditText.setText(missionInfoBundle.getString("name"));  
-			phoneEditText.setText(missionInfoBundle.getString("phone")); 
 			heightEditText.setText(missionInfoBundle.getString("height"));  
 			genderEditText.setText(missionInfoBundle.getString("gender"));  
 			haircolorEditText.setText(missionInfoBundle.getString("haircolor"));  
+			phoneEditText.setText(missionInfoBundle.getString("phone")); 
 			ageEditText.setText(missionInfoBundle.getString("age"));  
 			notesEditText.setText(missionInfoBundle.getString("notes"));   
 		} 

@@ -33,12 +33,12 @@ public class DetailsFragment extends Fragment
    
    private long rowID = -1; // selected Mission's rowID
    private TextView nameTextView; // displays Mission's name 
-   private TextView heightTextView; // displays Mission's phone
-   // private TextView writerTextView; // displays Mission's email
-   private TextView genderTextView; // displays Mission's street
-   private TextView haircolorTextView; // displays Mission's city
-   private TextView ageTextView; // displays Mission's state
-   private TextView notesTextView; // displays Mission's zip
+   private TextView heightTextView; // displays Mission's height
+   private TextView genderTextView; // displays Mission's gender
+   private TextView haircolorTextView; // displays Mission's haircolor
+   private TextView phoneTextView; // displays Mission's phone
+   private TextView ageTextView; // displays Mission's age
+   private TextView notesTextView; // displays Mission's notes
    
    // set DetailsFragmentListener when fragment attached   
    @Override
@@ -84,9 +84,9 @@ public class DetailsFragment extends Fragment
       // get the EditTexts
       nameTextView = (TextView) view.findViewById(R.id.nameTextView);
       heightTextView = (TextView) view.findViewById(R.id.heightTextView);
-      // writerTextView = (TextView) view.findViewById(R.id.producerTextView);
       genderTextView = (TextView) view.findViewById(R.id.genderTextView);
       haircolorTextView = (TextView) view.findViewById(R.id.haircolorTextView);
+      phoneTextView = (TextView) view.findViewById(R.id.phoneTextView);
       ageTextView = (TextView) view.findViewById(R.id.ageTextView);
       notesTextView = (TextView) view.findViewById(R.id.notesTextView);
       return view;
@@ -127,10 +127,10 @@ public class DetailsFragment extends Fragment
             Bundle arguments = new Bundle();
             arguments.putLong(MainActivity.ROW_ID, rowID);
             arguments.putCharSequence("name", nameTextView.getText());
-            // arguments.putCharSequence("director", directorTextView.getText());
             arguments.putCharSequence("height", heightTextView.getText());
             arguments.putCharSequence("gender", genderTextView.getText());
             arguments.putCharSequence("haircolor", haircolorTextView.getText());
+            arguments.putCharSequence("phone", phoneTextView.getText());
             arguments.putCharSequence("age", ageTextView.getText());
             arguments.putCharSequence("notes", notesTextView.getText());            
             listener.onEditMission(arguments); // pass Bundle to listener
@@ -166,19 +166,19 @@ public class DetailsFragment extends Fragment
    
          // get the column index for each data item
          int nameIndex = result.getColumnIndex("name");
-         // int directorIndex = result.getColumnIndex("director");
          int heightIndex = result.getColumnIndex("height");
          int genderIndex = result.getColumnIndex("gender");
          int haircolorIndex = result.getColumnIndex("haircolor");
+         int phoneIndex = result.getColumnIndex("phone");
          int ageIndex = result.getColumnIndex("age");
          int notesIndex = result.getColumnIndex("notes");
    
          // fill TextViews with the retrieved data
          nameTextView.setText(result.getString(nameIndex));
-         // directorTextView.setText(result.getString(directorIndex));
          heightTextView.setText(result.getString(heightIndex));
          genderTextView.setText(result.getString(genderIndex));
          haircolorTextView.setText(result.getString(haircolorIndex));
+         phoneTextView.setText(result.getString(phoneIndex));
          ageTextView.setText(result.getString(ageIndex));
          notesTextView.setText(result.getString(notesIndex));
    

@@ -12,7 +12,7 @@
         android:useDefaultMargins="true" >
 
     <TextView
-        android:id="@+id/nameLabelTextView"
+        android:id="@+id/objectiveLabelTextView"
         style="@style/MissionLabelTextView"
         android:layout_column="0"
         android:layout_row="0"

@@ -36,6 +36,7 @@
     <string name="hint_age">Age</string>
     <string name="hint_phone">Phone</string>
     <string name="hint_notes">Notes</string>
+     <string name="hint_objectives">Enter the Objectives here</string>
     <string name="label_name">Name:</string>
     <string name="label_gender">Gender:</string>
     <string name="label_height">Height (in cms):</string>
@@ -49,6 +50,9 @@
     <string name="error_message">You must enter a mission name</string>
     <string name="button_cancel">Cancel</string>
     <string name="button_delete">Delete</string>
+    <string name="objectives">Objectives</string>
+    <string name="save_objective">Save Objective</string>
+    <string name="label_objectives">Objective:</string>
     
 
 </resources>
