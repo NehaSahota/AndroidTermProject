@@ -25,79 +25,79 @@
         style="@style/MissionTextView" />
 
     <TextView
-        android:id="@+id/heightLabelTextView"
-        android:layout_column="0"
-        android:layout_row="1"
-        android:text="@string/label_height"
-        style="@style/MissionLabelTextView" />
-
-    <TextView
-        android:id="@+id/heightTextView"
-        android:layout_column="1"
-        android:layout_row="1"
-        style="@style/MissionTextView" />
-
-    <TextView
         android:id="@+id/genderLabelTextView"
         android:layout_column="0"
-        android:layout_row="2"
+        android:layout_row="1"
         android:text="@string/label_gender"
         style="@style/MissionLabelTextView" />
 
     <TextView
         android:id="@+id/genderTextView"
         android:layout_column="1"
-        android:layout_row="2"
+        android:layout_row="1"
         style="@style/MissionTextView" />
-    
-    <TextView
-        android:id="@+id/haircolorLabelTextView"
-        android:layout_column="0"
-        android:layout_row="3"
-        android:text="@string/label_haircolor"
-        style="@style/MissionLabelTextView" />
 
-    <TextView
-        android:id="@+id/haircolorTextView"
-        android:layout_column="1"
-        android:layout_row="3"
-        style="@style/MissionTextView" />
-    
     <TextView
         android:id="@+id/ageLabelTextView"
         android:layout_column="0"
-        android:layout_row="4"
+        android:layout_row="2"
         android:text="@string/label_age"
         style="@style/MissionLabelTextView" />
 
     <TextView
         android:id="@+id/ageTextView"
         android:layout_column="1"
+        android:layout_row="2"
+        style="@style/MissionTextView" />
+    
+    <TextView
+        android:id="@+id/heightLabelTextView"
+        android:layout_column="0"
+        android:layout_row="3"
+        android:text="@string/label_height"
+        style="@style/MissionLabelTextView" />
+
+    <TextView
+        android:id="@+id/heightTextView"
+        android:layout_column="1"
+        android:layout_row="3"
+        style="@style/MissionTextView" />
+    
+    <TextView
+        android:id="@+id/haircolorLabelTextView"
+        android:layout_column="0"
+        android:layout_row="4"
+        android:text="@string/label_haircolor"
+        style="@style/MissionLabelTextView" />
+
+    <TextView
+        android:id="@+id/haircolorTextView"
+        android:layout_column="1"
         android:layout_row="4"
         style="@style/MissionTextView" />
 
     <TextView
-        android:id="@+id/notesLabelTextView"
-        android:layout_column="0"
-        android:layout_row="5"
-        android:text="@string/label_notes"
-        style="@style/MissionLabelTextView" />
-
-    <TextView
-        android:id="@+id/notesTextView"
-        android:layout_column="1"
-        android:layout_row="5"
-        style="@style/MissionTextView" />
-    
-    <TextView
         android:id="@+id/phoneLabelTextView"
         android:layout_column="0"
-        android:layout_row="6"
+        android:layout_row="5"
         android:text="@string/label_phone"
         style="@style/MissionLabelTextView" />
 
     <TextView
         android:id="@+id/phoneTextView"
+        android:layout_column="1"
+        android:layout_row="5"
+        style="@style/MissionTextView" />
+    
+    <TextView
+        android:id="@+id/notesLabelTextView"
+        android:layout_column="0"
+        android:layout_row="6"
+        android:text="@string/label_notes"
+        style="@style/MissionLabelTextView" />
+
+    <TextView
+        android:id="@+id/notesTextView"
         android:layout_column="1"
         android:layout_row="6"
         style="@style/MissionTextView" />
