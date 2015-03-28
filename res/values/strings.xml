@@ -16,7 +16,7 @@
     <string name="height">Height (in cms)</string>
     <string name="hair">Hair Color</string>
     <string name="notes">Notes</string>
-    <string name="heading">**Enter the Details **</string>
+    <string name="heading">Enter the Details</string>
     <string name="objective">Objectives</string>
     <string name="client">Client</string>
     <string name="suspect">Suspect</string>
@@ -24,29 +24,29 @@
     
     
     
-    <string name="no_movies">No Movies</string>
+    <string name="no_missions">No Mission</string>
     <string name="menuitem_add">Add</string>
     <string name="menuitem_edit">Edit</string>
     <string name="menuitem_delete">Delete</string>
-    <string name="button_save_movie">Save Details </string>
+    <string name="button_save_mission">Save Details </string>
     <string name="hint_name">Name (Required)</string>
-    <string name="hint_director">Gender</string>
-    <string name="hint_writer">Height (in cms)</string>
-    <string name="hint_actor">Hair Color</string>
-    <string name="hint_actress">Age</string>
-    <string name="hint_genre">Notes</string>
-    <string name="hint_year">Year</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_height">Height (in cms)</string>
+    <string name="hint_haircolor">Hair Color</string>
+    <string name="hint_age">Age</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_notes">Notes</string>
     <string name="label_name">Name:</string>
-    <string name="label_director">Gender:</string>
-    <string name="label_writer">Height (in cms):</string>
-    <string name="label_actor">Hair Color:</string>
-    <string name="label_actress">Age:</string>
-    <string name="label_genre">Notes:</string>
-    <string name="label_year">Year:</string>
+    <string name="label_gender">Gender:</string>
+    <string name="label_height">Height (in cms):</string>
+    <string name="label_haircolor">Hair Color:</string>
+    <string name="label_age">Age:</string>
+    <string name="label_notes">Notes:</string>
+    <string name="label_phone">Phone:</string>
     <string name="confirm_title">Are You Sure?</string>
-    <string name="confirm_message">This will permanently delete the suspect</string>
+    <string name="confirm_message">This will permanently delete the mission</string>
     <string name="ok">OK</string>
-    <string name="error_message">You must enter a suspect name</string>
+    <string name="error_message">You must enter a mission name</string>
     <string name="button_cancel">Cancel</string>
     <string name="button_delete">Delete</string>
     

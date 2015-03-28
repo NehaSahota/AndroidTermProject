@@ -24,7 +24,7 @@
             android:id="@+id/heightEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_writer"
+            android:hint="@string/hint_height"
             android:imeOptions="actionNext"
             android:inputType="text" >
         </EditText>
@@ -33,7 +33,7 @@
             android:id="@+id/genderEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_director"
+            android:hint="@string/hint_gender"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress" >
         </EditText>
@@ -42,7 +42,7 @@
             android:id="@+id/haircolorEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_actor"
+            android:hint="@string/hint_haircolor"
             android:imeOptions="actionNext"
             android:inputType="textPostalAddress|textCapWords" >
         </EditText>
@@ -51,21 +51,21 @@
             android:id="@+id/ageEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_actress"
+            android:hint="@string/hint_age"
             android:imeOptions="actionNext"
             android:inputType="textPostalAddress|textCapWords" >
         </EditText>
-<!-- 
+
         <EditText
-            android:id="@+id/genreEditText"
+            android:id="@+id/phoneEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_genre"
+            android:hint="@string/hint_phone"
             android:imeOptions="actionNext"
             android:inputType="text" >
-        </EditText> -->
+        </EditText>
 
-       <!--  <EditText
+<!--         <EditText
             android:id="@+id/yearEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -78,16 +78,16 @@
             android:id="@+id/notesEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_genre"
+            android:hint="@string/hint_notes"
             android:imeOptions="actionNext"
             android:inputType="textMultiLine" />
 
         <Button
-            android:id="@+id/saveSuspectButton"
+            android:id="@+id/saveMissionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/button_save_movie" >
+            android:text="@string/button_save_mission" >
         </Button>
 
     </GridLayout>
