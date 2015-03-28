@@ -161,22 +161,22 @@ public class AddEditDetailsFragment extends Fragment
 			// insert the mission information into the database
 			rowID = databaseConnector.insertMission(
 			nameEditText.getText().toString(),
-	            heightEditText.getText().toString(), 
-	            phoneEditText.getText().toString(), 
-	            genderEditText.getText().toString(),
-	            haircolorEditText.getText().toString(), 
-	            ageEditText.getText().toString(), 
-	            notesEditText.getText().toString());
+			genderEditText.getText().toString(),
+			ageEditText.getText().toString(), 
+            heightEditText.getText().toString(), 
+            haircolorEditText.getText().toString(), 
+            phoneEditText.getText().toString(), 
+            notesEditText.getText().toString());
 		} 
 		else
 		{
 			databaseConnector.updateMission(rowID,
 	            nameEditText.getText().toString(),
-	            heightEditText.getText().toString(), 
-	            phoneEditText.getText().toString(), 
 	            genderEditText.getText().toString(),
-	            haircolorEditText.getText().toString(), 
 	            ageEditText.getText().toString(), 
+	            heightEditText.getText().toString(), 
+	            haircolorEditText.getText().toString(), 
+	            phoneEditText.getText().toString(), 
 	            notesEditText.getText().toString());
 		}
 	} // end method saveMission

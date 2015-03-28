@@ -21,30 +21,12 @@
         </EditText>
 
         <EditText
-            android:id="@+id/heightEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_height"
-            android:imeOptions="actionNext"
-            android:inputType="text" >
-        </EditText>
-
-        <EditText
             android:id="@+id/genderEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_gender"
             android:imeOptions="actionNext"
-            android:inputType="textEmailAddress" >
-        </EditText>
-
-        <EditText
-            android:id="@+id/haircolorEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_haircolor"
-            android:imeOptions="actionNext"
-            android:inputType="textPostalAddress|textCapWords" >
+            android:inputType="text" >
         </EditText>
 
         <EditText
@@ -53,7 +35,25 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_age"
             android:imeOptions="actionNext"
-            android:inputType="textPostalAddress|textCapWords" >
+            android:inputType="number" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/heightEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_height"
+            android:imeOptions="actionNext"
+            android:inputType="number" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/haircolorEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_haircolor"
+            android:imeOptions="actionNext"
+            android:inputType="text" >
         </EditText>
 
         <EditText
@@ -62,17 +62,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_phone"
             android:imeOptions="actionNext"
-            android:inputType="text" >
-        </EditText>
-
-<!--         <EditText
-            android:id="@+id/yearEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_year"
-            android:imeOptions="actionDone"
             android:inputType="number" >
-        </EditText> -->
+        </EditText>
 
         <EditText
             android:id="@+id/notesEditText"
