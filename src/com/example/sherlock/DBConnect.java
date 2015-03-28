@@ -1,8 +1,5 @@
 package com.example.sherlock;
 
-
-
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -11,122 +8,121 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
+public class DBConnect 
+{
+	// database name
+	private static final String DATABASE_NAME = "UserMission";
 
-public class DBConnect {
-	
-	private static final String DATABASE_NAME = "UserSuspects";
-    
-	
-	   private SQLiteDatabase database; 
-	   private DatabaseOpenHelper databaseOpenHelper; 
-	 
-	   public DBConnect(Context context) 
-	   {
-	      
-	      databaseOpenHelper = 
-	         new DatabaseOpenHelper(context, DATABASE_NAME, null, 1);
-	   }
+	// for interacting with the database
+	private SQLiteDatabase database;
 
-	   
-	   public void open() throws SQLException 
-	   {
-	      
-	      database = databaseOpenHelper.getWritableDatabase();
-	   }
+	// creates the database
+	private DatabaseOpenHelper databaseOpenHelper; 
 
-	  
-	   public void close() 
-	   {
-	      if (database != null)
-	         database.close(); 
-	   } 
+	// public constructor for DatabaseConnector
+	public DBConnect(Context context) 
+	{
+		// create a new DatabaseOpenHelper
+		databaseOpenHelper = new DatabaseOpenHelper(context, DATABASE_NAME, null, 1);
+	}
 
-	   public long insertSuspect(String name, String height, String gender,  
-	      String haircolor, String age, String notes, String year) 
-	   {
-	      ContentValues newSuspect = new ContentValues();
-	      newSuspect.put("name", name);
-	      newSuspect.put("height", height);
-	      newSuspect.put("gender", gender);
-	      newSuspect.put("haircolor", haircolor);
-	      newSuspect.put("age", age);
-	      newSuspect.put("notes", notes);
-	      newSuspect.put("year", year);
+	// open the database connection
+	public void open() throws SQLException 
+	{
+		// create or open a database for reading/writing
+		database = databaseOpenHelper.getWritableDatabase();
+	}
 
-	      open(); // open the database
-	      long rowID = database.insert("movies", null, newSuspect);
-	      close(); // close the database
-	      return rowID;
-	   } 
+	// close the database connection
+	public void close() 
+	{
+		if (database != null){
+			database.close(); // close the database connection
+		}
+	} 
 
-	   // updates an existing suspect in the database
-	   public void updateSuspect(long id, String name, String height, 
-	      String gender, String haircolor, String age, String notes, String year) 
-	   {
-	      ContentValues editSuspect = new ContentValues();
-	      editSuspect.put("name", name);
-	      editSuspect.put("height", height);
-	      editSuspect.put("gender", gender);
-	      editSuspect.put("haircolor", haircolor);
-	      editSuspect.put("age", age);
-	      editSuspect.put("notes", notes);
-	      editSuspect.put("year", year);
+	// inserts a new Mission in the database
+	public long insertMission(String name, String gender, String age,  
+	String height, String haircolor, String phone, String notes) 
+	{
+		ContentValues newMission = new ContentValues();
+		newMission.put("name", name);
+		newMission.put("gender", gender);
+		newMission.put("age", age);
+		newMission.put("height", height);
+		newMission.put("haircolor", haircolor);
+		newMission.put("phone", phone);
+		newMission.put("notes", notes);
 
-	      open(); 
-	      database.update("suspects", editSuspect, "_id=" + id, null);
-	      close(); 
-	   } 
+		open(); // open the database
+		long rowID = database.insert("missions", null, newMission);
+		close(); // close the database
+		return rowID;
+	} 
 
-	  
-	   public Cursor getAllSuspects() 
-	   {
-	      return database.query("suspects", new String[] {"_id", "name"}, 
-	         null, null, null, null, "name");
-	   } 
+	// updates an existing Mission in the database
+	public void updateMission(long id, String name, String gender, 
+	String age, String height, String haircolor, String phone, String notes) 
+	{
+		ContentValues editMission = new ContentValues();
+		editMission.put("name", name);
+		editMission.put("gender", gender);
+		editMission.put("age", age);
+		editMission.put("height", height);
+		editMission.put("haircolor", haircolor);
+		editMission.put("phone", phone);
+		editMission.put("notes", notes);
 
-	 
-	   public Cursor getOneSuspect(long id) 
-	   {
-	      return database.query(
-	         "suspects", null, "_id=" + id, null, null, null, null);
-	   } 
+		open(); // open the database
+		database.update("missions", editMission, "_id=" + id, null);
+		close(); // close the database
+	} // end method updateMission
 
-	  
-	   public void deleteSuspect(long id) 
-	   {
-	      open();
-	      database.delete("suspects", "_id=" + id, null);
-	      close(); 
-	   } 
-	   
-	   private class DatabaseOpenHelper extends SQLiteOpenHelper 
-	   {
-	      
-	      public DatabaseOpenHelper(Context context, String name,
-	         CursorFactory factory, int version) 
-	      {
-	         super(context, name, factory, version);
-	      }
+	// return a Cursor with all Mission names in the database
+	public Cursor getAllMissions() 
+	{
+		return database.query("missions", new String[] {"_id", "name"}, null, null, null, null, "name");
+	} 
 
-	     
-	      @Override
-	      public void onCreate(SQLiteDatabase db) 
-	      {
-	        
-	         String createQuery = "CREATE TABLE suspects" +
-	            "(_id integer primary key autoincrement," +
-	            "name TEXT, height TEXT, gender TEXT, " +
-	            "haircolor TEXT, age TEXT, notes TEXT, year TEXT);";
-	                  
-	         db.execSQL(createQuery); 
-	      } 
+	// return a Cursor containing specified Mission's information 
+	public Cursor getOneMission(long id) 
+	{
+		return database.query("missions", null, "_id=" + id, null, null, null, null);
+	} 
 
-	      @Override
-	      public void onUpgrade(SQLiteDatabase db, int oldVersion, 
-	          int newVersion) 
-	      {
-	      }
-	   } 
+	// delete the mission specified by the given String name
+	public void deleteMission(long id) 
+	{
+		open(); // open the database
+		database.delete("missions", "_id=" + id, null);
+		close(); // close the database
+	} 
 
+	private class DatabaseOpenHelper extends SQLiteOpenHelper 
+	{
+		// constructor
+		public DatabaseOpenHelper(Context context, String name, CursorFactory factory, int version) 
+		{
+			super(context, name, factory, version);
+		}
 
-}
+		// creates the Missions table when the database is created
+		@Override
+		public void onCreate(SQLiteDatabase db) 
+		{
+			// query to create a new table named Missions
+			String createQuery = "CREATE TABLE missions" +
+			"(_id integer primary key autoincrement," +
+			"name TEXT, gender TEXT, age TEXT, " +
+			"height TEXT, haircolor TEXT, phone TEXT, notes TEXT);";
+
+			db.execSQL(createQuery); // execute query to create the database
+		} 
+
+		@Override
+		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) 
+		{
+		}
+	} // end class DatabaseOpenHelper
+} // end class DatabaseConnector
+
