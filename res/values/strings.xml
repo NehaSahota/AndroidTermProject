@@ -53,6 +53,8 @@
     <string name="objectives">Objectives</string>
     <string name="save_objective">Save Objective</string>
     <string name="label_objectives">Objective:</string>
+    <string name="hint_objective_name">Mission Name</string>
+    <string name="objective_name">Name</string>
     
 
 </resources>

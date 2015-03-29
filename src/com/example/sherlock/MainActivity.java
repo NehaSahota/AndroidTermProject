@@ -7,7 +7,8 @@ import android.app.FragmentTransaction;
 public class MainActivity extends Activity 
    implements MissionListFragment.MissionListFragmentListener,
       DetailsFragment.DetailsFragmentListener, 
-      AddEditDetailsFragment.AddEditFragmentListener
+      AddEditDetailsFragment.AddEditFragmentListener,
+      AddEditMissionFragment.AddEditMissionFragmentListener
 {
    // keys for storing row ID in Bundle passed to a fragment
    public static final String ROW_ID = "row_id"; 

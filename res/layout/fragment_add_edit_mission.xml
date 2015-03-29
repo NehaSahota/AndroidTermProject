@@ -12,28 +12,33 @@
         android:columnCount="1"
         android:orientation="vertical"
         android:useDefaultMargins="true" >
-        
-        <Button
-        android:id="@+id/addMissionButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFCC99"
-        android:imeOptions="actionNext"
-        android:text="@string/add_mission" />
-
-        <EditText
-            android:id="@+id/objectivesEditText"
-            android:layout_gravity="fill_horizontal"
-            android:layout_width="match_parent"
-        	android:layout_height="wrap_content"
-            android:hint="@string/hint_objectives"
-            android:inputType="textMultiLine" >
-            
           
+        
+         <EditText
+            android:id="@+id/missionNameEditText"
+            android:layout_gravity="fill_horizontal"
+           
+            android:hint="@string/hint_objective_name" >
 
          
         </EditText>
+        
+        <EditText
+            android:id="@+id/objectiveEditText"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:layout_gravity="fill_horizontal"
+            android:hint="@string/hint_objectives"
+            android:inputType="textMultiLine" >
+         
+        </EditText>
+
+        <Button
+            android:id="@+id/saveObjectiveButton"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/save_objective" />
+
+       
         
     </GridLayout>
 

@@ -60,6 +60,25 @@ public class DBConnect
 		return rowID;
 	} 
 
+	
+	// inserts a new Mission in the database
+	public long insertMission2(String name, String objective) 
+	{
+		ContentValues newMission = new ContentValues();
+		newMission.put("name", name);
+		newMission.put("objective", objective);
+	
+		open(); // open the database
+		long rowID = database.insert("missions", null, newMission);
+		close(); // close the database
+		return rowID;
+	} 
+	
+	
+	
+
+	
+	
 	// updates an existing Mission in the database
 	public void updateMission(long id, String name, String gender, 
 	String age, String height, String haircolor, String phone, String notes) 
@@ -77,24 +96,72 @@ public class DBConnect
 		database.update("missions", editMission, "_id=" + id, null);
 		close(); // close the database
 	} // end method updateMission
+	
+	
+	
+	// updates an existing Mission in the database
+	public void updateMission2(long id, String name, String objective) 
+	{
+		ContentValues editMission = new ContentValues();
+		editMission.put("name", name);
+		editMission.put("objective", objective);
+		
+
+		open(); // open the database
+		database.update("missions", editMission, "_id=" + id, null);
+		close(); // close the database
+	} // end method updateMission
+	
+	
+	
+	
+	
+	
+	
 
 	// return a Cursor with all Mission names in the database
 	public Cursor getAllMissions() 
 	{
 		return database.query("missions", new String[] {"_id", "name"}, null, null, null, null, "name");
 	} 
+	
+	
+	// return a Cursor with all Mission names in the database
+		public Cursor getAllMissions2() 
+		{
+			return database.query("missions2", new String[] {"_id", "name"}, null, null, null, null, "name");
+		} 
+	
+	
 
 	// return a Cursor containing specified Mission's information 
 	public Cursor getOneMission(long id) 
 	{
 		return database.query("missions", null, "_id=" + id, null, null, null, null);
 	} 
+	
+	
+	// return a Cursor containing specified Mission's information 
+		public Cursor getOneMission2(long id) 
+		{
+			return database.query("missions2", null, "_id=" + id, null, null, null, null);
+		} 
+	
+	
+	
 
 	// delete the mission specified by the given String name
 	public void deleteMission(long id) 
 	{
 		open(); // open the database
 		database.delete("missions", "_id=" + id, null);
+		close(); // close the database
+	} 
+	
+	public void deleteMission2(long id) 
+	{
+		open(); // open the database
+		database.delete("missions2", "_id=" + id, null);
 		close(); // close the database
 	} 
 
@@ -115,9 +182,17 @@ public class DBConnect
 			"(_id integer primary key autoincrement," +
 			"name TEXT, gender TEXT, age TEXT, " +
 			"height TEXT, haircolor TEXT, phone TEXT, notes TEXT);";
+			
+			//query to create a new table named Missions2
+			String createQuery2 = "CREATE TABLE missions2" +
+					"(_id integer primary key autoincrement," +
+					"objective TEXT,name TEXT);";
 
 			db.execSQL(createQuery); // execute query to create the database
+			db.execSQL(createQuery2); // execute query to create the database
 		} 
+		
+		
 
 		@Override
 		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) 
