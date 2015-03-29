@@ -69,7 +69,7 @@ public class AddEditMissionFragment extends Fragment {
 
 				// inflate GUI and get references to EditTexts
 				View view = 
-				inflater.inflate(R.layout.fragment_add_edit, container, false);
+				inflater.inflate(R.layout.fragment_add_edit_mission, container, false);
 				missionNameEditText = (EditText) view.findViewById(R.id.missionNameEditText);
 				objectiveEditText = (EditText) view.findViewById(R.id.objectiveEditText);
 				

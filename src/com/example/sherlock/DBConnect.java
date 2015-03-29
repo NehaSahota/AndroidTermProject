@@ -64,12 +64,12 @@ public class DBConnect
 	// inserts a new Mission in the database
 	public long insertMission2(String name, String objective) 
 	{
-		ContentValues newMission = new ContentValues();
-		newMission.put("name", name);
-		newMission.put("objective", objective);
+		ContentValues newObjective = new ContentValues();
+		newObjective.put("name", name);
+		newObjective.put("objective", objective);
 	
 		open(); // open the database
-		long rowID = database.insert("missions", null, newMission);
+		long rowID = database.insert("missions2", null, newObjective);
 		close(); // close the database
 		return rowID;
 	} 
@@ -186,7 +186,7 @@ public class DBConnect
 			//query to create a new table named Missions2
 			String createQuery2 = "CREATE TABLE missions2" +
 					"(_id integer primary key autoincrement," +
-					"objective TEXT,name TEXT);";
+					"name TEXT,objective TEXT);";
 
 			db.execSQL(createQuery); // execute query to create the database
 			db.execSQL(createQuery2); // execute query to create the database

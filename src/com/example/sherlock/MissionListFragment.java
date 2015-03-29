@@ -92,7 +92,7 @@ public class MissionListFragment extends ListFragment
    }
 
    // performs database query outside GUI thread
-   private class GetMissionsTask extends AsyncTask<Object, Object, Cursor> 
+   public class GetMissionsTask extends AsyncTask<Object, Object, Cursor> 
    {
       DBConnect databaseConnector = 
          new DBConnect(getActivity());
