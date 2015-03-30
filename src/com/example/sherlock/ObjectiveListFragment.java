@@ -145,7 +145,7 @@ public class ObjectiveListFragment extends ListFragment{
 	   public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
 	   {
 	      super.onCreateOptionsMenu(menu, inflater);
-	      inflater.inflate(R.menu.fragment_mission_list_menu, menu);
+	      inflater.inflate(R.menu.fragment_objective_list_menu, menu);
 	   }
 
 	   // handle choice from options menu

@@ -6,7 +6,7 @@ import android.view.MenuItem;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 
-public class MainActivity extends Activity 
+public class MainActivity2 extends Activity 
    implements MissionListFragment.MissionListFragmentListener,
       DetailsFragment.DetailsFragmentListener, 
       AddEditDetailsFragment.AddEditFragmentListener,
@@ -319,7 +319,6 @@ public class MainActivity extends Activity
 	   	}
 	   
    }
-   
    
 }
 

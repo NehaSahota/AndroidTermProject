@@ -65,6 +65,7 @@ public final class R {
         public static final int saveMissionButton=0x7f08000d;
         public static final int saveObjectiveButton=0x7f080011;
         public static final int saveSuspectButton=0x7f08000b;
+        public static final int second=0x7f080027;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -77,8 +78,11 @@ public final class R {
     }
     public static final class menu {
         public static final int fragment_details_menu=0x7f070000;
-        public static final int fragment_mission_list_menu=0x7f070001;
-        public static final int main=0x7f070002;
+        public static final int fragment_mission_details_menu=0x7f070001;
+        public static final int fragment_mission_list_menu=0x7f070002;
+        public static final int fragment_objective_list_menu=0x7f070003;
+        public static final int main=0x7f070004;
+        public static final int main2=0x7f070005;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
