@@ -46,22 +46,22 @@ public class MainActivity extends Activity
       }
       
       
-    /*  //*************************************ADDED******************************************************
-      if (findViewById(R.id.fragmentContainer) != null) 
-      { 
-    	  //******************************ADDED*******************
-    	  super.onCreate(savedInstanceState);
-          setContentView(R.layout.activity_main2);
-          //********************************************ADDED**************************************TWO LINES ABOVE
-         // create missionListFragment
-    	  objectiveListFragment = new ObjectiveListFragment();
-         
-         // add the fragment to the FrameLayout
-         FragmentTransaction transaction = 
-            getFragmentManager().beginTransaction();
-         transaction.add(R.id.fragmentContainer, objectiveListFragment);
-         transaction.commit(); // causes missionListFragment to display
-      }*/
+      //*************************************ADDED******************************************************
+//      if (findViewById(R.id.fragmentContainer) != null) 
+//      { 
+//    	  //******************************ADDED*******************
+//    	  super.onCreate(savedInstanceState);
+//          setContentView(R.layout.activity_main2);
+//          //********************************************ADDED**************************************TWO LINES ABOVE
+//         // create missionListFragment
+//    	  objectiveListFragment = new ObjectiveListFragment();
+//         
+//         // add the fragment to the FrameLayout
+//         FragmentTransaction transaction = 
+//            getFragmentManager().beginTransaction();
+//         transaction.add(R.id.fragmentContainer, objectiveListFragment);
+//         transaction.commit(); // causes missionListFragment to display
+//      }
    }
    
    // called when MainActivity resumes

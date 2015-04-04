@@ -68,6 +68,7 @@ public class AddEditMissionFragment extends Fragment {
 				setHasOptionsMenu(true); // fragment has menu items to display
 
 				// inflate GUI and get references to EditTexts
+				
 				View view = 
 				inflater.inflate(R.layout.fragment_add_edit_mission, container, false);
 				missionNameEditText = (EditText) view.findViewById(R.id.missionNameEditText);
