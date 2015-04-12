@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends ListActivity {
 	String classes[] = { "CreateMission", "FindMission"};
+	String classes_name[] = {"Create Mission", "Find Mission"};
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
@@ -29,7 +30,7 @@ public class MainActivity extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setListAdapter(new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, classes));
+		setListAdapter(new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, classes_name));
 	}
 
 }

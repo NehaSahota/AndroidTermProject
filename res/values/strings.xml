@@ -54,7 +54,7 @@
     </string-array>
 
     <string name="title_activity_find_suspects">FindMissions</string>
-    <string name="title_activity_suspect_info">MissionInfoActivity</string>
+    <string name="title_activity_suspect_info">Sherlock App</string>
     <string name="title_activity_add_movement">AddSuspectActivity</string>
     <string name="dateFormat">DD/MM/YYYY</string>
     <string name="title_activity_simple_upload">SimpleUpload</string>
