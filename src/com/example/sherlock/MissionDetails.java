@@ -71,7 +71,7 @@ public class MissionDetails extends Activity {
 		        
 		        tvDateTime.setText("Name: "+strDateTime);
 		        tvLocation.setText("Location: "+strLocation);
-		        tvNotes.setText("Notes: "+strNotes);
+		        tvNotes.setText("Note: "+strNotes);
 				
 		       	cursor.moveToNext();
 			}

@@ -93,8 +93,8 @@ public class CreateMission extends Activity {
 	public void showAlert(String message, String buttonValue) {
 		if(!message.equals("") && !buttonValue.equals("")){
 			AlertDialog.Builder builder = new AlertDialog.Builder(CreateMission.this);
-	    	builder.setMessage(message +"\n\nDateTime: "+strDateTime+"\nLocation: "+strLocation+
-	    			"\nNotes: "+strNotes)
+	    	builder.setMessage(message +"\n\nName: "+strDateTime+"\nLocation: "+strLocation+
+	    			"\nNote: "+strNotes)
 	    	       .setCancelable(false)
 	    	       .setPositiveButton(buttonValue, new DialogInterface.OnClickListener() {
 	    	           @Override
