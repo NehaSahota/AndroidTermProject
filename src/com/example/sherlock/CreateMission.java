@@ -1,45 +1,20 @@
 package com.example.sherlock;
 
-
-
-
-//import java.io.ByteArrayInputStream;
-//import java.io.IOException;
-//import java.io.InputStream;
-//import java.text.SimpleDateFormat;
-//import java.util.Calendar;
-//import org.apache.http.client.HttpClient;
-//import org.apache.http.client.ResponseHandler;
-//import org.apache.http.client.methods.HttpPost;
-//import org.apache.http.impl.client.BasicResponseHandler;
-//import org.apache.http.impl.client.DefaultHttpClient;
-//import org.xmlpull.v1.XmlPullParser;
-//import org.xmlpull.v1.XmlPullParserException;
-//import android.location.Location;
-//import android.location.LocationListener;
-//import android.location.LocationManager;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
-//import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
-//import android.util.Log;
-//import android.util.Xml;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-//import android.widget.Toast;
 
 public class CreateMission extends Activity {
 
 	public static final String ID = "suspectId";
 	public static final String NAME = "suspectName";
-	//private String mission_name="";
-	//private int intMissionId=0;
-	//private TextView tvMissionName;
 	private TextView tvDateTime;
 	private TextView tvLocation;
 	private TextView tvNotes;
@@ -66,7 +41,6 @@ public class CreateMission extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_mission);
-        //tvMissionName = (TextView)findViewById(R.id.tvAddMissionFullname);
         etDateTime = (EditText)findViewById(R.id.etAddMissionDateTime);
         etLocation = (EditText)findViewById(R.id.etAddMissionLocation);
         etNotes = (EditText)findViewById(R.id.etNotes);
@@ -90,7 +64,7 @@ public class CreateMission extends Activity {
 		        	boolean valid = true;		        	
 		        	if(strDateTime.equals("")){
 		        		tvDateTime.setTextColor(Color.RED);
-		        		etDateTime.setError("Enter date and time");
+		        		etDateTime.setError("Enter Name");
 		        		valid = false;
 		        	}
 		        	if(strLocation.equals("")){
@@ -100,7 +74,7 @@ public class CreateMission extends Activity {
 		        	}
 		        	if(strNotes.equals("")){
 		        		tvNotes.setTextColor(Color.RED);
-		        		etNotes.setError("Enter location");
+		        		etNotes.setError("Enter Note");
 		        		valid = false;
 		        	}
 		        	if(valid){

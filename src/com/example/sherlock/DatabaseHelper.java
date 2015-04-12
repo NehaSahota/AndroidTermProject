@@ -76,7 +76,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		return database.query(
 				"mission_tbl", 
 				new String[] { "_id", "date_and_time", "location_placename", "comments" },
-				"location_placename like \"%"+queryString+"%\"", 
+				"date_and_time like \"%"+queryString+"%\"", 
 				null, null, null, null); 
 	}
 	//returns all missions (for upload purpose) in a Cursor

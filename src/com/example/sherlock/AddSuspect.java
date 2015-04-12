@@ -40,11 +40,9 @@ public class AddSuspect extends Activity {
 	private String strHairColor;
 	private String strComment;
 	private DatabaseHelper dbHelper;
-	//private String mission_name="";
 	public static final String ID = "missionId";
 	public static final String NAME = "missionName";
 	private int intMissionId=0;
-	//private TextView tvmissionName;
 	
 	//on activity pause it is necessary to close database for security reason.
 	@Override
@@ -115,7 +113,7 @@ public class AddSuspect extends Activity {
 		        	boolean valid = true;		        	
 		        	if(strFullname.equals("")){
 		        		tv_fullname.setTextColor(Color.RED);
-		        		et_fullname.setError("Enter your fullname");
+		        		et_fullname.setError("Enter the fullname");
 		        		valid = false;
 		        	}
 		        	if(strGender.equals("")){
