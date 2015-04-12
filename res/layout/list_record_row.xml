@@ -9,7 +9,6 @@
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/detective"
         android:paddingBottom="15dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
