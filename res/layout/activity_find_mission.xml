@@ -2,9 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearView01"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"   
-        android:orientation="vertical"
-        android:padding="20dp" >
+    android:layout_height="wrap_content"
+    android:background="@drawable/detective"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
         <EditText
             android:id="@+id/et_search"
             android:layout_width="match_parent"
